@@ -42,6 +42,14 @@ app.use(
 app.get('/', (req, res) => {
   res.send('API WORKING');
 });
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
+
+
 
 // Start Server
 app.listen(PORT, () => {
