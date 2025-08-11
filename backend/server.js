@@ -19,10 +19,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 4000;
+//const PORT = 4000;
 
 // Middleware to handle CORS
-app.use(cors());
+//app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://rresumexpert.netlify.app'],
+  credentials: true
+}));
 
 // Connect Database
 connectDB();
@@ -58,6 +62,15 @@ app.get('/',(req,res)=>{
 
 
 // Start Server
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+});*/
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 4000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  });
+}
+
+// ✅ Always export for Vercel
+export default app;
