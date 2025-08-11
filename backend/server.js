@@ -4,10 +4,11 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import cors from 'cors'
+
 import { connectDB } from './config/db.js';  // ← use named import here
 import authRoutes from './routes/authRoutes.js';
 import resumeRoutes from './routes/resumeRoutes.js';
+
 
 
 
