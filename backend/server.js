@@ -10,9 +10,7 @@ import authRoutes from './routes/authRoutes.js';
 import resumeRoutes from './routes/resumeRoutes.js';
 
 
-app.use(cors({
-  origin:["https://localhost:5173","https://rresumexpert.netlify.app"]
-}));
+
 
 
 
