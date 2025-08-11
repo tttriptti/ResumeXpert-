@@ -1,4 +1,4 @@
-export const BASE_URL = "https://vercel.com/tttripttis-projects/resume-xpert";
+export const BASE_URL = "https://resume-xpert-one.vercel.app/";
 
 //utils/apiPath.js
 export const API_PATHS = {
